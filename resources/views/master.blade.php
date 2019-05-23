@@ -1,13 +1,22 @@
-<!doctype html>
+<?php
+/**
+ * Created by PhpStorm.
+ * User: sandra.poll
+ * Date: 23.05.2019
+ * Time: 11:21
+ */
+?>
+        <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Styles -->
     <style>
@@ -37,7 +46,7 @@
         .top-right {
             position: absolute;
             right: 10px;
-            top: 18px;
+            top: 28px;
         }
 
         .content {
@@ -61,27 +70,25 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+
+        hr {
+            width: 50%;
+        }
+
+        .top {
+            margin-top: 100px;
+        }
     </style>
 </head>
 <body>
-<div class="flex-center position-ref full-height">
-    <div class="top-right links">
-        <a href="">link</a>
-        <a href="">link</a>
-        <a href="">link</a>
-    </div>
 
-    <div class="content">
-        <div class="title m-b-md">
-            Laravel
-        </div>
-
-        <div class="links">
-            <a href="{{ url('/list') }}">List</a>
-            <a href="{{ url('/add') }}">Add</a>
-            <a href="{{ url('/edit') }}">Edit</a>
-        </div>
-    </div>
+<div class="top-right links">
+    <a href="">link</a>
+    <a href="">link</a>
+    <a href="">link</a>
 </div>
+
+@yield('content')
+
 </body>
 </html>

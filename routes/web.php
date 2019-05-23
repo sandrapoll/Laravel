@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/edit', function () {
+    return view('edit');
+});
+
+Route::get('/add', function () {
+    return view('add');
+});
+
+Route::get('/list', function () {
+    return view('list');
+});
+
+Route::get('/list', 'ProjectsController@getProjects');
