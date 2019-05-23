@@ -83,7 +83,7 @@
 <body>
 
 <div class="top-right links">
-    <a href="">link</a>
+    <a href="{{ url('/list') }}">list</a>
     <a href="">link</a>
     <a href="">link</a>
 </div>
