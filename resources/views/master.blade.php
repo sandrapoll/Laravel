@@ -6,19 +6,19 @@
  * Time: 11:21
  */
 ?>
-        <!doctype html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
-    <!-- Fonts -->
+
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Styles -->
+
     <style>
         html, body {
             background-color: #fff;
@@ -78,14 +78,18 @@
         .top {
             margin-top: 100px;
         }
+
+        .wide {
+            width: 20%;
+        }
     </style>
 </head>
 <body>
 
 <div class="top-right links">
-    <a href="{{ url('/list') }}">list</a>
-    <a href="">link</a>
-    <a href="">link</a>
+    <a href="{{ route('project.list') }}">List</a>
+    <a href="{{ route('project.add') }}">Add</a>
+    <a href="{{ route('home') }}">Home</a>
 </div>
 
 @yield('content')
