@@ -15,6 +15,7 @@
                 @foreach($projects as $project)
                     <h1 class="display-4">{{ $project->title }}</h1>
                     <p>{{ $project->description }}</p>
+                    <p>Created: {{ date('d.m.Y h:i:s', strtotime($project->created_at)) }}</p>
                     <a href="{{ route('project.show', ['project' => $project->id]) }}"
                        class="btn btn-outline-info wide rounded-0">Edit</a>
                     <a href="{{ route('project.delete', ['project' => $project->id]) }}">
